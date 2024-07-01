@@ -1,5 +1,5 @@
-import Card from '../components/Card';
-import styles from '../styles/Services.module.css'; // Assuming you have a CSS module for your services page
+import Card from '../components/card';
+import styles from '../styles/Services.module.css';
 
 const services = [
   {
