@@ -7,18 +7,18 @@ const navItems = {
   "/services": {
     name: "Services",
   },
-  "/newsletter": {
-    name: "Newsletter",
-  },
+  // "/newsletter": {
+  //   name: "Newsletter",
+  // },
   "/portfolio": {
     name: "Portfolio",
   },
-  "/posts": {
-    name: "Posts",
+  "/resume": {
+    name: "Resume",
   },
-  "/about": {
-    name: "About",
-  },
+  // "/posts": {
+  //   name: "Posts",
+  // },
 };
 
 export function Navbar() {

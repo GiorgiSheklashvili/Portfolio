@@ -1,11 +1,18 @@
-export default function Home() {
+import React from 'react';
+import Introduction from './homepage/Introduction';
+
+
+const HomePage: React.FC = () => {
   return (
+
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
-      </h1>
-      <p className="mb-4">{`I'm a blabla`}</p>
-      <div className="my-8">{/* <BlogPosts /> */}</div>
+      <div>
+        <Introduction />
+        <div className="my-8">{/* <BlogPosts /> */}</div>
+      </div>
+
     </section>
   );
-}
+};
+
+export default HomePage;
