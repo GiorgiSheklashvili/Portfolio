@@ -11,10 +11,6 @@ const Introduction: React.FC = () => {
         I advocate for best practices at every step of the development process{" "}
       </p>
       <p className="text-lg mb-6">
-        I have a keen interest in diverse industries and technologies, including
-        Fintech, Paytech, and Web 3.0.{" "}
-      </p>
-      <p className="text-lg mb-6">
         Currently, I am serving as a Software Architect for an Open Banking
         project in Georgia.
       </p>
