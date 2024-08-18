@@ -8,6 +8,7 @@ const HomePage: React.FC = () => {
         <Introduction />
         <div className="my-8">{/* <BlogPosts /> */}</div>
       </div>
+      //test
     </section>
   );
 };

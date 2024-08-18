@@ -104,7 +104,7 @@ const projects: Project[] = [
       "/CVGenerator/pdf.jpg",
       "/CVGenerator/project_structure.jpg",
       "/CVGenerator/swagger.jpg",
-    ],
+    ], //test
   },
 ];
 
