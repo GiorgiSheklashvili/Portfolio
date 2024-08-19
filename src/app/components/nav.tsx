@@ -4,15 +4,15 @@ const navItems = {
   "/": {
     name: "Home",
   },
-  "/services": {
-    name: "Services",
-  },
+  // "/services": {
+  //   name: "Services",
+  // },
   // "/newsletter": {
   //   name: "Newsletter",
   // },
-  "/portfolio": {
-    name: "Portfolio",
-  },
+  // "/portfolio": {
+  //   name: "Portfolio",
+  // },
   "/resume": {
     name: "Resume",
   },
