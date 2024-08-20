@@ -29,8 +29,8 @@ const projects: Project[] = [
     tools: ``,
     github: `https://www.producthunt.com/products/audioclass`,
     screens: [
-      "/Audioclass/Screenshot_1.png",
       "/Audioclass/Screenshot_2.png",
+      "/Audioclass/Screenshot_1.png",
       "/Audioclass/Screenshot_3.png",
       "/Audioclass/Screenshot_4.png",
     ],
@@ -111,7 +111,6 @@ const projects: Project[] = [
 const PortfolioPage = () => {
   return (
     <section className="flex flex-wrap justify-around p-4">
-      <h1 className="text-2xl font-bold">My Projects</h1>
       <PortfolioClientComponent projects={projects} />
     </section>
   );

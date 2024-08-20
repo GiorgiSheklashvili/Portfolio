@@ -23,9 +23,9 @@ const PortfolioClientComponent: React.FC<PortfolioClientComponentProps> = ({
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedScreenIndex, setSelectedScreenIndex] = useState<number>(0);
 
-  const openScreens = (index: number) => {
-    setSelectedProject(index);
-    setSelectedScreenIndex(0);
+  const openScreens = (projectIndex: number, screenIndex: number = 0) => {
+    setSelectedProject(projectIndex);
+    setSelectedScreenIndex(screenIndex);
   };
 
   const closeScreens = () => {
@@ -48,7 +48,6 @@ const PortfolioClientComponent: React.FC<PortfolioClientComponentProps> = ({
     );
   };
 
-  // Handle keyboard events
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (selectedProject !== null) {
@@ -75,34 +74,44 @@ const PortfolioClientComponent: React.FC<PortfolioClientComponentProps> = ({
   }, [selectedProject]);
 
   return (
-    <div>
-      <ol>
-        {projects.map((project, index) => (
-          <li key={index} className="mb-8">
-            <div>
-              <h2 className="text-lg font-bold">{project.title}</h2>
-              <p>{project.description}</p>
-              <p>
-                <strong>Languages:</strong> {project.languages}
-              </p>
-              <p>
-                <strong>Frameworks:</strong> {project.frameworks}
-              </p>
-              <p>
-                <strong>Tools:</strong> {project.tools}
-              </p>
-              {project.screens.length > 0 && (
-                <button
-                  onClick={() => openScreens(index)}
-                  className="mt-2 text-sm text-blue-500 underline"
-                >
-                  View Screens
-                </button>
-              )}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.map((project, index) => (
+        <div
+          key={index}
+          className="bg-white shadow-md rounded-lg overflow-hidden"
+        >
+          {project.screens.length > 0 ? (
+            <div
+              className="relative w-full h-32 md:h-48 cursor-pointer"
+              onClick={() => openScreens(index)}
+            >
+              <Image
+                fill={true}
+                src={project.screens[0]}
+                alt={`Thumbnail for ${project.title}`}
+                className="object-cover"
+              />
             </div>
-          </li>
-        ))}
-      </ol>
+          ) : (
+            <div className="relative w-full h-32 md:h-48 flex items-center justify-center bg-gray-200 text-gray-600">
+              No Image
+            </div>
+          )}
+          <div className="p-4">
+            <h2 className="text-lg font-bold">{project.title}</h2>
+            <p className="text-sm">{project.description}</p>
+            <p className="text-sm mt-2">
+              <strong>Languages:</strong> {project.languages}
+            </p>
+            <p className="text-sm">
+              <strong>Frameworks:</strong> {project.frameworks}
+            </p>
+            <p className="text-sm">
+              <strong>Tools:</strong> {project.tools}
+            </p>
+          </div>
+        </div>
+      ))}
 
       {selectedProject !== null && (
         <div
@@ -120,7 +129,7 @@ const PortfolioClientComponent: React.FC<PortfolioClientComponentProps> = ({
               <div className="w-full h-96 relative">
                 <Image
                   fill={true}
-                  src={projects[selectedProject].screens[selectedScreenIndex]}
+                  src={projects[selectedProject!].screens[selectedScreenIndex]}
                   alt={`Screen ${selectedScreenIndex + 1}`}
                   className="object-contain rounded-lg"
                 />
