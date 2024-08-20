@@ -97,7 +97,7 @@ const PortfolioClientComponent: React.FC<PortfolioClientComponentProps> = ({
               No Image
             </div>
           )}
-          <div className="p-4">
+          <div className="p-4 text-black">
             <h2 className="text-lg font-bold">{project.title}</h2>
             <p className="text-sm">{project.description}</p>
             <p className="text-sm mt-2">
