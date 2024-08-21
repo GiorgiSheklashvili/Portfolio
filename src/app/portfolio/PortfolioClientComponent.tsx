@@ -99,7 +99,9 @@ const PortfolioClientComponent: React.FC<PortfolioClientComponentProps> = ({
           )}
           <div className="p-4 text-black">
             <h2 className="text-lg font-bold">{project.title}</h2>
-            <p className="text-sm">{project.description}</p>
+            <p className="text-sm" style={{ whiteSpace: "pre-line" }}>
+              {project.description}
+            </p>
             <p className="text-sm mt-2">
               <strong>Languages:</strong> {project.languages}
             </p>
@@ -119,7 +121,13 @@ const PortfolioClientComponent: React.FC<PortfolioClientComponentProps> = ({
           onClick={closeScreens}
         >
           <div
-            className="relative w-full max-w-3xl mx-auto"
+            className={`relative w-full max-w-3xl mx-auto ${
+              projects[selectedProject!].screens[selectedScreenIndex].endsWith(
+                ".svg"
+              )
+                ? "bg-white"
+                : ""
+            }`}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between">

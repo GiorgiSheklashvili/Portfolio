@@ -14,12 +14,12 @@ interface Project {
 const projects: Project[] = [
   {
     title: "OpenBanking",
-    description: `The Open Banking Group is a member of the Berlin Group OpenFinance Task Force, working to align Georgia's open banking standards with European ones. The group is actively engaged in global open banking initiatives, focusing on enhancing standards and implementing them within Georgia's financial sector. We collaborate with the National Bank of Georgia, commercial banks, and other interested parties, such as fintech companies.`,
+    description: `The Open Banking Group is working to align Georgia's open banking standards with European ones. The group is focusing on enhancing standards and implementing them within Georgia's financial sector. We collaborate with the National Bank of Georgia, commercial banks, and other parties`,
     languages: `Java`,
     frameworks: `Spring boot`,
     tools: `Velocity, AWS ECS, Docker, Cucumber, TestNG, Rest Assured `,
     github: ``,
-    screens: [],
+    screens: ["/OpenBanking/logo.svg"],
   },
   {
     title: "AudioClass",
@@ -29,8 +29,8 @@ const projects: Project[] = [
     tools: ``,
     github: `https://www.producthunt.com/products/audioclass`,
     screens: [
+      "/Audioclass/nap.jpg",
       "/Audioclass/Screenshot_2.png",
-      "/Audioclass/Screenshot_1.png",
       "/Audioclass/Screenshot_3.png",
       "/Audioclass/Screenshot_4.png",
     ],
@@ -42,7 +42,7 @@ const projects: Project[] = [
     frameworks: `Spring boot, Express.js, React`,
     tools: `Velocity, Docke, MongoDB, AWS, Truffle, Solidity`,
     github: ``,
-    screens: [],
+    screens: ["/Kraken/kraken2.jpg", "/Kraken/kraken.jpg"],
   },
   {
     title: "Tracey",
@@ -51,7 +51,7 @@ const projects: Project[] = [
     frameworks: `Spring boot, Android, Solidity`,
     tools: `Velocity, PostgreSQL, Web3j`,
     github: ``,
-    screens: [],
+    screens: ["/Tracey/fishcatch1.jpg", "/Tracey/fiscatch2.jpg"],
   },
   {
     title: "Guest Registration",

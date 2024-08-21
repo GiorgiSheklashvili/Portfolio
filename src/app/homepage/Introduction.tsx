@@ -13,7 +13,9 @@ const Introduction = () => {
         className="rounded-full mb-6"
       />
       <p className="text-lg mb-6">
-        Builder <br />8 years Software Dev
+        Builder <br />
+        Solving real-world problems with a holistic view <br /> 8 years as a
+        Software Engineer
       </p>
       <p className="text-lg mb-6">
         Currently, I am serving as a Software Architect for an Open Banking
