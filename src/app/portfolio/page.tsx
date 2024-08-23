@@ -19,7 +19,7 @@ const projects: Project[] = [
     frameworks: `Spring boot`,
     tools: `Velocity, AWS ECS, Docker, Cucumber, TestNG, Rest Assured `,
     github: ``,
-    screens: ["/OpenBanking/logo.svg"],
+    screens: ["/OpenBanking/logo.svg", "/OpenBanking/screen.jpg"],
   },
   {
     title: "AudioClass",
